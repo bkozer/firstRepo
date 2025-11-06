@@ -1,0 +1,14 @@
+1)
+SELECT plik, liczba_odbitek, nr_klienta
+FROM zamowienia
+WHERE rodzaj = "matowy" AND liczba_odbitek > 100;
+2)
+SELECT (zamowienia.liczba_odbitek * zdjecia.cena) as "Do zapłaty"
+FROM zamowienia INNER JOIN zdjecia ON zamowienia.rodzaj = zdjecia.rodzaj
+WHERE zamowienia.nr_klienta = 3;
+3)
+SELECT COUNT(liczba_odbitek)
+FROM zamowienia
+WHERE rodzaj = 'błyszczący';
+4)
+CREATE USER 'Anna'@'localhost' IDENTIFIED BY '@NNa';
